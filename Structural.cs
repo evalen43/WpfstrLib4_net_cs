@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Xml;
 using System.Collections;
-using Matrix;
+using MatrixCs;
 
 namespace WpfstrLib4_net_cs
 {
