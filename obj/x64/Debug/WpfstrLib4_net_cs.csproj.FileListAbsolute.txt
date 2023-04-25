@@ -1,0 +1,2 @@
+C:\WpfstrLib4_net_cs\obj\x64\Debug\WpfstrLib4_net_cs.csproj.AssemblyReference.cache
+C:\WpfstrLib4_net_cs\obj\x64\Debug\WpfstrLib4_net_cs.csproj.CoreCompileInputs.cache
