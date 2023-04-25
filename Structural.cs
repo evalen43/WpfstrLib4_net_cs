@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data.SQLite;
-using System.Threading.Tasks;
 using System.Diagnostics;
 using System.IO;
 using System.Xml;
@@ -389,20 +385,18 @@ namespace WpfstrLib4_net_cs
                 irow = ndfel;// A[]GetUpperBound(0);
                 icol = ndfel;// A.GetUpperBound(1);
 
-                using (StreamWriter Debugfile = new StreamWriter(filelog, append: xappend))
-                {
+                using StreamWriter Debugfile = new StreamWriter(filelog, append: xappend);
 
-                    Debugfile.WriteLine(label);
-                    Debugfile.WriteLine("Nrows " + irow.ToString());
-                    Debugfile.WriteLine("Ncols " + icol.ToString());
-                    for (int i = 0; i < irow; i++)
-                    {
-                        for (int j = 0; j < icol; j++)
-                            Debugfile.Write(A[i, j].ToString() + "\t");
-                        Debugfile.WriteLine("");
-                    }
-                    Debugfile.Close();
+                Debugfile.WriteLine(label);
+                Debugfile.WriteLine("Nrows " + irow.ToString());
+                Debugfile.WriteLine("Ncols " + icol.ToString());
+                for (int i = 0; i < irow; i++)
+                {
+                    for (int j = 0; j < icol; j++)
+                        Debugfile.Write(A[i, j].ToString() + "\t");
+                    Debugfile.WriteLine("");
                 }
+                Debugfile.Close();
             }
             public void Bandgauss()
             {
@@ -708,8 +702,10 @@ namespace WpfstrLib4_net_cs
                                     int nldnodes = lines.Length;
                                     for (int i = 0; i < nldnodes; i++)
                                     {
-                                        Jload jload = new();
-                                        jload.P = new double[ndf];
+                                        Jload jload = new()
+                                        {
+                                            P = new double[ndf]
+                                        };
                                         string[] words = lines[i].Split(new char[] { ' ', '=' });
                                         for (int k = 0; k < words.Length; k++)
                                         {
@@ -749,9 +745,11 @@ namespace WpfstrLib4_net_cs
                                     int nldmembers = lines.Length;
                                     for (int i = 0; i < nldmembers; i++)
                                     {
-                                        Mload mload = new();
-                                        mload.f = new double[ndfel];
-                                        mload.vlocal = new double[ndfel];
+                                        Mload mload = new()
+                                        {
+                                            f = new double[ndfel],
+                                            vlocal = new double[ndfel]
+                                        };
                                         string[] words = lines[i].Split(new char[] { ' ', '=' });
                                         for (int k = 0; k < words.Length; k++)
                                         {
