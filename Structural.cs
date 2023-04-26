@@ -6,7 +6,7 @@ using System.Xml;
 using System.Collections;
 using MatrixCs;
 
-namespace WpfstrLib4_net_cs
+namespace LinearStaticAnalysis
 {
     public class Structural
     {
@@ -70,7 +70,7 @@ namespace WpfstrLib4_net_cs
 
             public bool AISC(double scaleL, double scaleF)
             {
-                string cs = @"URI=file:C:\Git\repos\WpfstrLib4_net_cs\aisc_shapes_v15_US.db3";
+                string cs = @"URI=file:C:\Git\repos\LinearStaticAnalysis\aisc_shapes_v15_US.db3";
                 using var db = new SQLiteConnection(cs);
                 db.Open();
                 string stm = "SELECT * FROM shapesv15_US"; /// name of table in database (shapesv15_US)
