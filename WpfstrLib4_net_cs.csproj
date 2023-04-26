@@ -7,8 +7,8 @@
     <ProjectGuid>{0B8BC739-49D5-4AF8-92A1-0C2D8266BA81}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WpfstrLib4_net_cs</RootNamespace>
-    <AssemblyName>WpfstrLib4_net_cs</AssemblyName>
+    <RootNamespace>LinearStaticAnalysis</RootNamespace>
+    <AssemblyName>LinearStaticAnalysis</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
